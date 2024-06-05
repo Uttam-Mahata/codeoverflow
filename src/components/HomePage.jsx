@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
 import { Typography, Container, Box, Grid, Paper, Button } from '@mui/material';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const theme = createTheme({
   palette: {
@@ -27,7 +28,7 @@ const theme = createTheme({
 });
 
 const BackgroundBox = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(135deg, #e0f7fa, #006064)',
+  background: 'linear-gradient(135deg, #000, #00a)',
   padding: theme.spacing(10, 0),
   color: theme.palette.common.white,
   textAlign: 'center',
@@ -53,8 +54,8 @@ const HomePage = () => {
     <ThemeProvider theme={theme}>
       <BackgroundBox>
         <Container>
-          <Typography variant="h2" component="h1" gutterBottom data-aos="fade-up">
-            CodeOverflow
+          <Typography variant="h2" component="h1" gutterBottom>
+            🚀 Code Overflow
           </Typography>
           <Typography variant="h5" component="p" gutterBottom data-aos="fade-up" data-aos-delay="200">
             Welcome to CodeOverflow, your one-stop platform for learning and mastering coding skills.
