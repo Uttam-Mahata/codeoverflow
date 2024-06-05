@@ -1,4 +1,4 @@
- 
+
 import { Typography, Container, Box, Grid, Paper, Button } from '@mui/material';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
@@ -15,7 +15,7 @@ const theme = createTheme({
 });
 
 const BackgroundBox = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(135deg, #fff, #1a4f11)',
+  background: 'linear-gradient(135deg, #000, #00a)',
   padding: theme.spacing(10, 0),
   color: theme.palette.common.white,
   textAlign: 'center',
@@ -37,7 +37,7 @@ const HomePage = () => {
       <BackgroundBox>
         <Container>
           <Typography variant="h2" component="h1" gutterBottom>
-            CodeOverflow
+            🚀 Code Overflow
           </Typography>
           <Typography variant="h5" component="p" gutterBottom>
             Welcome to CodeOverflow, your one-stop platform for learning and mastering coding skills.
@@ -91,15 +91,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-
-// const HomePage = () => {
-//   return (
-//     <div>
-//       <h1>CodeOverflow</h1>
-//       <p>Welcome to CodeOverflow</p>
-//     </div>
-//   );
-// };
-
-// export default HomePage;
