@@ -1,7 +1,21 @@
-import { Typography, Container, Box, Grid, Paper, Button } from '@mui/material';
-import { Tabs, Tab, Badge } from '@mui/material';
+import { Button, Tabs, Tab, Badge, Grid, useMediaQuery } from '@mui/material';
 import QuestionBlock from '../QuestionBlock';
+import { useTheme } from '@mui/material/styles';
+
 const QuestionsPage = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const handleKeyDown = (event) => {
+    if (isMobile && event.key === 'Tab') {
+      event.preventDefault();
+      // Logic for mobile Tab navigation if needed
+
+      // Example: Focus on the first question block
+      document.querySelector('.questions-container .questions .question-block').focus();
+      
+    }
+  };
 
   const question = {
     title: 'Docker Deployment always fails - Massive Container Size',
@@ -10,44 +24,42 @@ const QuestionsPage = () => {
     answers: 4,
     votes: 3,
     views: 10
-  }
-
-
+  };
 
   return (
-    <div className="questions-container">
-      <div className="top-bar flex justify-around mt-10">
-        <h1 className="text-3xl">All Questions</h1>
-        <Button variant="contained">Ask Question</Button>
-      </div>
-      <div className="flex justify-around items-center mt-5">
-        <h1>5564 Questions</h1>
-        <Tabs
-          textColor="primary"
-          indicatorColor="primary"
-        >
-          <Tab label="Newest" />
-          <Tab label="Active" />
-          <Tab
-            label={
-              <Badge color="primary">
-                Bountied
-              </Badge>
-            }
-          />
-          <Tab label="Unanswered" />
-          <Tab label="More" />
-        </Tabs>
-        <Button variant="outlined">Filter</Button>
-      </div>
-      <div className="questions flex flex-col gap-10">
-        <QuestionBlock questionData={question} />
-        <QuestionBlock questionData={question} />
-        <QuestionBlock questionData={question} />
-        <QuestionBlock questionData={question} />
-        <QuestionBlock questionData={question} />
-        <QuestionBlock questionData={question} />
-      </div>
+    <div className="questions-container" onKeyDown={handleKeyDown} tabIndex="0">
+      <Grid container spacing={2} className="top-bar mt-10">
+        <Grid item xs={12} sm={8} md={10}>
+          <h1 className="text-3xl">All Questions</h1>
+        </Grid>
+        <Grid item xs={12} sm={4} md={2} className="flex justify-end">
+          <Button variant="contained">Ask Question</Button>
+        </Grid>
+      </Grid>
+      <Grid container spacing={2} className="mt-5" alignItems="center">
+        <Grid item xs={12} sm={4}>
+          <h1>5564 Questions</h1>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Tabs textColor="primary" indicatorColor="primary" variant={isMobile ? 'scrollable' : 'standard'}>
+            <Tab label="Newest" />
+            <Tab label="Active" />
+            <Tab label={<Badge color="primary">Bountied</Badge>} />
+            <Tab label="Unanswered" />
+            <Tab label="More" />
+          </Tabs>
+        </Grid>
+        <Grid item xs={12} sm={2} className="flex justify-end">
+          <Button variant="outlined">Filter</Button>
+        </Grid>
+      </Grid>
+      <Grid container spacing={2} className="questions mt-5">
+        {[...Array(6)].map((_, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <QuestionBlock questionData={question} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };
