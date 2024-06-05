@@ -48,7 +48,7 @@ CodeOverflow is a comprehensive platform designed to enhance your coding skills 
 
 4. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Usage
@@ -101,7 +101,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any questions or suggestions, feel free to open an issue or contact the project maintainers:
 
-- [Your Name](mailto:your-email@example.com)
+[![Sidhupaji-2004](https://github.com/Sidhupaji-2004.png?size=50)](https://github.com/Sidhupaji-2004)
+[![Anurag-ghosh-12](https://github.com/Anurag-ghosh-12.png?size=50)](https://github.com/Anurag-ghosh-12)
+[![Uttam-Mahata](https://github.com/Uttam-Mahata.png?size=50)](https://github.com/Uttam-Mahata)
 
 ---
 
