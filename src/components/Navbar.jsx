@@ -59,59 +59,59 @@ const Navbar = () => {
       sx={{ width: 250 }}
       role="presentation"
       onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(true)}
+      onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem button component={Link} to="/">
+        <ListItem  ButtonBase component={Link} to="/">
           <ListItemText primary="Home" />
         </ListItem>
-        <ListItem button onClick={() => handleMenuClick('chapters')}>
+        <ListItem  ButtonBase onClick={() => handleMenuClick('chapters')}>
           <ListItemText primary="Chapters" />
           {openChapters ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={openChapters} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItem button component={Link} to="/chapters/cpdsa">
+            <ListItem  ButtonBase component={Link} to="/chapters/cpdsa">
               <ListItemText primary="CP/DSA" />
             </ListItem>
-            <ListItem button component={Link} to="/chapters/web-development">
+            <ListItem  ButtonBase component={Link} to="/chapters/web-development">
               <ListItemText primary="Web Dev" />
             </ListItem>
-            <ListItem button component={Link} to="/chapters/app-development">
+            <ListItem  ButtonBase component={Link} to="/chapters/app-development">
               <ListItemText primary="App Dev" />
             </ListItem>
-            <ListItem button component={Link} to="/chapters/machine-learning">
+            <ListItem  ButtonBase component={Link} to="/chapters/machine-learning">
               <ListItemText primary="ML" />
             </ListItem>
           </List>
         </Collapse>
-        <ListItem button onClick={() => handleMenuClick('features')}>
+        <ListItem  ButtonBase onClick={() => handleMenuClick('features')}>
           <ListItemText primary="Features" />
           {openFeatures ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={openFeatures} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItem button component={Link} to="/features/contests">
+            <ListItem  ButtonBase component={Link} to="/features/contests">
               <ListItemText primary="Contests" />
             </ListItem>
-            <ListItem button component={Link} to="/features/questions">
+            <ListItem  ButtonBase component={Link} to="/features/questions">
               <ListItemText primary="Questions" />
             </ListItem>
-            <ListItem button component={Link} to="/features/bug-squashing">
+            <ListItem  ButtonBase component={Link} to="/features/bug-squashing">
               <ListItemText primary="Bug Squashing" />
             </ListItem>
           </List>
         </Collapse>
-        <ListItem button onClick={() => handleMenuClick('support')}>
+        <ListItem  ButtonBase onClick={() => handleMenuClick('support')}>
           <ListItemText primary="Support" />
           {openSupport ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={openSupport} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItem button component={Link} to="/support/help-center">
+            <ListItem  ButtonBase component={Link} to="/support/help-center">
               <ListItemText primary="Help Center" />
             </ListItem>
-            <ListItem button component={Link} to="/support/guidepaths-materials">
+            <ListItem  ButtonBase component={Link} to="/support/guidepaths-materials">
               <ListItemText primary="Guidepaths" />
             </ListItem>
           </List>
