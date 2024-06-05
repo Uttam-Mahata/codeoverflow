@@ -53,7 +53,7 @@ CodeOverflow is a comprehensive platform designed to enhance your coding skills 
 
 ## Usage
 
-- Navigate to `http://localhost:3000` in your web browser to view the application.
+- Navigate to `http://localhost:5173` in your web browser to view the application.
 - Use the navigation bar to explore different chapters and features.
 - Participate in contests, ask questions, and report bugs through the respective sections.
 
@@ -91,19 +91,16 @@ Contributions are welcome! Please follow these steps to contribute:
     ```bash
     git push origin feature-branch
     ```
-5. Open a pull request.
+5. Open a pull request to merge in dev-branch.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
 For any questions or suggestions, feel free to open an issue or contact the project maintainers:
 
-[![Sidhupaji-2004](https://github.com/Sidhupaji-2004.png?size=50)](https://github.com/Sidhupaji-2004)
-[![Anurag-ghosh-12](https://github.com/Anurag-ghosh-12.png?size=50)](https://github.com/Anurag-ghosh-12)
-[![Uttam-Mahata](https://github.com/Uttam-Mahata.png?size=50)](https://github.com/Uttam-Mahata)
+[![Sidhupaji-2004](https://github.com/Sidhupaji-2004.png?size=100)](https://github.com/Sidhupaji-2004)
+[![Anurag-ghosh-12](https://github.com/Anurag-ghosh-12.png?size=100)](https://github.com/Anurag-ghosh-12)
+[![Uttam-Mahata](https://github.com/Uttam-Mahata.png?size=100)](https://github.com/Uttam-Mahata)
 
 ---
 
