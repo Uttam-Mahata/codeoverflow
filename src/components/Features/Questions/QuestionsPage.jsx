@@ -27,11 +27,11 @@ const QuestionsPage = () => {
 
   return (
     <div className="questions-container p-4 mt-4 relative" onKeyDown={handleKeyDown} tabIndex="0">
-               <h1 className="text-3xl text-center">All Questions</h1>
+      <h1 className="text-3xl text-center">All Questions</h1>
 
       <Grid container spacing={2} className="top-bar mt-10">
-       
-       
+
+
         <Grid item xs={12} sm={2} className="flex justify-end">
           <Button
             variant="contained"
