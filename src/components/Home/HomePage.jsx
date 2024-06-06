@@ -1,9 +1,14 @@
+// src/components/HomePage.js
+import  { useEffect } from 'react';
 import { Typography, Container, Box, Grid, Paper, Button } from '@mui/material';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faLaptopCode, faRobot} from '@fortawesome/free-solid-svg-icons';
+// Import Testimonials component
+import Testimonials from '../Testimonials/Testimonials';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-
+import 'tailwindcss/tailwind.css';
 
 const theme = createTheme({
   palette: {
@@ -32,6 +37,7 @@ const BackgroundBox = styled(Box)(({ theme }) => ({
   padding: theme.spacing(10, 0),
   color: theme.palette.common.white,
   textAlign: 'center',
+  minHeight: '100vh',
 }));
 
 const SectionBox = styled(Box)(({ theme }) => ({
@@ -43,6 +49,7 @@ const FeaturePaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
   color: theme.palette.text.secondary,
+  minHeight: '250px',
 }));
 
 const HomePage = () => {
@@ -58,13 +65,18 @@ const HomePage = () => {
             🚀 Code Overflow
           </Typography>
           <Typography variant="h5" component="p" gutterBottom data-aos="fade-up" data-aos-delay="200">
-            Welcome to CodeOverflow, your one-stop platform for learning and mastering coding skills.
+
+
+Code Overflow is a platform for developers to learn and practice coding. We offer a wide range of tutorials, challenges, and projects to help you improve your coding skills. Whether you&apos;re a beginner or an experienced developer, you&apos;ll find something to challenge and inspire you on Code Overflow.
+
+
           </Typography>
           <Button variant="contained" color="secondary" size="large" data-aos="fade-up" data-aos-delay="400">
             Get Started
           </Button>
         </Container>
       </BackgroundBox>
+
       <SectionBox>
         <Container>
           <Typography variant="h4" component="h2" textAlign={'center'} gutterBottom data-aos="fade-right">
@@ -73,6 +85,7 @@ const HomePage = () => {
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6} md={4}>
               <FeaturePaper elevation={3} data-aos="fade-up" data-aos-delay="100">
+                <FontAwesomeIcon icon={faCode} size="3x" className="mb-4 text-indigo-500" />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Competitive Programming
                 </Typography>
@@ -83,16 +96,18 @@ const HomePage = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <FeaturePaper elevation={3} data-aos="fade-up" data-aos-delay="200">
+                <FontAwesomeIcon icon={faLaptopCode} size="3x" className="mb-4 text-green-500" />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Web Development
                 </Typography>
                 <Typography component="p">
-                  Learn to build modern, responsive websites with our comprehensive web development tutorials.
+                  Learn to build modern, responsive websites with our  web development tutorials.
                 </Typography>
               </FeaturePaper>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <FeaturePaper elevation={3} data-aos="fade-up" data-aos-delay="300">
+                <FontAwesomeIcon icon={faRobot} size="3x" className="mb-4 text-red-500" />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Machine Learning
                 </Typography>
@@ -108,12 +123,15 @@ const HomePage = () => {
               Learn More
             </Button>
           </Box>
-
         </Container>
-
-      
-
       </SectionBox>
+
+      {/* Testimonials component */}
+      <Testimonials />
+
+   
+
+  
     </ThemeProvider>
   );
 };
