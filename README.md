@@ -87,7 +87,7 @@ We welcome contributions from the community! Here's how you can get involved:
 Got questions or suggestions? Reach out to us:
 - **Maintainers:**
 - [![Sidhupaji-2004](https://github.com/Sidhupaji-2004.png?size=100)](https://github.com/Sidhupaji-2004)
-- [![Anurag-ghosh-12](https://github.com/Anurag-ghosh-12.png?size=100)](https://github.com/Anurag-ghosh-12) [Anurag-ghosh-12](https://github.com/Anurag-ghosh-12)
-- [![Uttam-Mahata](https://github.com/Uttam-Mahata.png?size=100)](https://github.com/Uttam-Mahata) [Uttam-Mahata](https://github.com/Uttam-Mahata)
+- [![Anurag-ghosh-12](https://github.com/Anurag-ghosh-12.png?size=100)](https://github.com/Anurag-ghosh-12)(https://github.com/Anurag-ghosh-12)
+- [![Uttam-Mahata](https://github.com/Uttam-Mahata.png?size=100)](https://github.com/Uttam-Mahata)(https://github.com/Uttam-Mahata)
 
 Join us on this exciting journey of code exploration and mastery at **CodeOverflow**! 🌟
