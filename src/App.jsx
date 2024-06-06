@@ -1,16 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './components/HomePage';
-import CPDSA from './components/Chapters/CPDSA';
-import WebDevelopment from './components/Chapters/WebDevelopment';
-import AppDevelopment from './components/Chapters/AppDevelopment';
-import MachineLearning from './components/Chapters/MachineLearning';
-import ContestsPage from './components/Features/ContestsPage';
-import QuestionsPage from './components/Features/QuestionsPage';
-import BugSquashing from './components/Features/BugSquashing';
+import Navbar from './components/Header/Navbar';
+import HomePage from './components/Home/HomePage';
+import CPDSA from './components/Chapters/CPDSA/CPDSA';
+import WebDevelopment from './components/Chapters/WEBDEV/WebDevelopment';
+import AppDevelopment from './components/Chapters/AppDev/AppDevelopment';
+import MachineLearning from './components/Chapters/ML/MachineLearning';
+import ContestsPage from './components/Features/Contest/ContestsPage';
+import QuestionsPage from './components/Features/Questions/QuestionsPage';
+import BugSquashing from './components/Features/BugSquash/BugSquashing';
 import HelpCenterContent from './components/Support/HelpCenterContent';
 import GuidepathsMaterials from './components/Support/GuidepathsMaterials';
+import './index.css';
 import './App.css';
+
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -28,6 +31,8 @@ const App = () => {
         <Route path="/support/help-center" element={<HelpCenterContent />} />
         <Route path="/support/guidepaths-materials" element={<GuidepathsMaterials />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 };

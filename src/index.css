@@ -1,12 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 
 html {
     scroll-behavior: smooth;
   }
   
-  /* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+  /* ----- CHANGE THE SCROLL BAR DESIGN -----
   ::-webkit-scrollbar {
     width: 10px;
     border-radius: 25px;
@@ -23,3 +24,19 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: #bbb;
   }
+*/
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #efecec;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: #84a0ec;
+  }
+  
